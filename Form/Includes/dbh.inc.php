@@ -1,11 +1,8 @@
 <?php
-
 $servername = "localhost";
 $dBUsername = "root";
 $dBPassword = "";
 $dBName = "projecte";
-
-
 $conn = mysqli_connect($servername, $dBUsername, $dBPassword, $dBName );
 
 if(!$conn) {
