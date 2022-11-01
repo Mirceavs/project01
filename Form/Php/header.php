@@ -15,13 +15,43 @@ session_start();
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
     <div class="container-fluid">
         <a href="#" class="navbar-brand"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <button class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavAltMarkup"
+            aria_control="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            >
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="mr-auto"></div>
+            <div class="navbar-nav">
+                <a href="cart.php" class="nav-item nav-link active">
+                    <h5 class="px5 cart">
+                        <i class="fas fa-shopping-cart"></i> Cart 
+                        <?php
+                        if(isset($_SESSION['cart'])){
+                            $count = count($_SESSION['cart']);
+                        echo "<span id='cart_count' class='text-warning bg-light'>$count</span>";
+                        } else {
+                        echo "<span id='cart_count' class='text-warning bg-light'>0</span>";
+
+                        }
+                        ?>
+
+                    </h5>
+                </a>
+            </div>
+        </div>
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="Home.php">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="products.php">Products</a></li>
@@ -39,5 +69,6 @@ session_start();
                 </li>
             </ul>
         </div>
+      
     </div>
 </nav>

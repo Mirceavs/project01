@@ -2,7 +2,7 @@
 require_once '../Includes/dbh.inc.php';
 require_once '../Includes/functions.inc.php';
 require_once '../Includes/products.inc.php';
-function component($productname, $productprice, $productimg){
+function component($productname, $productprice, $productimg, $productid){
     $element ="
 
     <div class='col-md-3 col-sm-6 my-3 my-md-0'>
@@ -25,17 +25,17 @@ function component($productname, $productprice, $productimg){
                         </p>
                         <h5>
                             <small><s class='text-secondary'>$15</s></small>
-                            <span class='price'>$productprice</span>
+                            <span class='price'>$$productprice</span>
                         </h5>
                         <button type='submit' class='btn btn-warning my-3' name='add'>Add to cart<i class='fas fa-shopping-cart'></i></button>
+                        <input type='hidden' name='product_id' value='$productid'>
                     </div>
                 </div>
             </form>
         </div>";
 echo $element;
 }
-// function ProductsDb(){
-//     $element = '
+
 // <div class="container">
 //     <div class="row text-center py-5">
 //         <div class="col-md-3 col-sm-6 my-3 my-md-0">
@@ -147,7 +147,6 @@ echo $element;
 //             </form>
 //         </div>
 //     </div>
-// </div>'
-// echo $element;
+// </div>
 // }
 // ?>

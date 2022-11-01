@@ -9,7 +9,7 @@ if(isset($_SESSION["useremail"])) {
 ?>
 
 <h1>PHP Project01</h1>
-<p> Cacacacaccacacacaccacacacaccacacacacaccaca</p>
+<p> Lore ipsumLore ipsumLore ipsumLore ipsumLore ipsumLore ipsumLore ipsumLore ipsumLore ipsumLore ipsumLore ipsumLore ipsumLore ipsumLore ipsum</p>
 
 <?php
 include 'footer.php';

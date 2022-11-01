@@ -99,7 +99,7 @@ function loginUser($conn, $email, $password) {
 
 // get products from database
 
-function getData($conn, $productname, $productprice, $productimg){
+function getData($conn, $productname, $productprice, $productimg, $productid){
     $sql = "SELECT * FROM productsdb";
     $stmt = mysqli_stmt_init($conn);
     if (mysqli_connect_errno()) {
